@@ -5,7 +5,7 @@ BLACK_MAGIC_TPWR := 'disable'
 endif
 
 .PHONY: debug-deps
-debug-deps: $(BUILD_DIR)/$(TARGET).elf
+debug-deps: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).svd
 
 .PHONY: upload
 upload: $(BUILD_DIR)/$(TARGET).elf
