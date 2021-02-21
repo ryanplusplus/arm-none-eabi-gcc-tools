@@ -10,7 +10,9 @@ erase:
 	@openocd -f $(OPENOCD_CFG_DIR)/erase.cfg
 
 $(BUILD_DIR)/$(TARGET).svd: $(SVD)
+	@mkdir -p $(BUILD_DIR)
 	@cp $(SVD) $@
 
 $(BUILD_DIR)/openocd.cfg: $(OPENOCD_CFG_DIR)/debug.cfg
-	@cp @< $@
+	@mkdir -p $(BUILD_DIR)
+	@cp $< $@

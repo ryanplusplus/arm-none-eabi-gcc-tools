@@ -124,6 +124,6 @@ clean:
 	@echo Cleaning...
 	@$(RM) -rf $(BUILD_DIR)
 
-include $(dir $(realpath $(lastword $(MAKEFILE_LIST))))/debug.mk
+include $(dir $(realpath $(lastword $(MAKEFILE_LIST))))debug-adapter.mk
 
 -include $(DEPS)

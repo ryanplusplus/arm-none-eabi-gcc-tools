@@ -6,6 +6,9 @@
 - `LINKER_CFG`
 - `OPENOCD_CONFIG_DIR`
 - `SVD`
+- `DEBUG_ADAPTER` (`jlink` or `black_magic`)
+- `BLACK_MAGIC_PORT`
+- `BLACK_MAGIC_POWER_TARGET`
 - `INC_DIRS`
 - `SYS_INC_DIRS`
 - `SRC_FILES`
