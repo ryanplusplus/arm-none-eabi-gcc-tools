@@ -6,6 +6,10 @@
 - `LINKER_CFG`
 - `OPENOCD_CONFIG_DIR`
 - `SVD`
+- `INC_DIRS`
+- `SYS_INC_DIRS`
+- `SRC_FILES`
+- `SRC_DIRS`
 - `ASFLAGS`
 - `CPPFLAGS`
 - `CFLAGS`
@@ -21,6 +25,7 @@ For each library name in `LIBS`:
 - `$(name)_CFLAGS`
 - `$(name)_CXXFLAGS`
 - `$(name)_INC_DIRS`
+- `$(name)_SYS_INC_DIRS`
 - `$(name)_LIB_FILES`
 - `$(name)_LIB_DIRS`
 
