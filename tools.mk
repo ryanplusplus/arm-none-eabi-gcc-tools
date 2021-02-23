@@ -9,7 +9,7 @@ endif
 OBJS := $(SRCS:%=$(BUILD_DIR)/%.o)
 DEPS := $(SRCS:%=$(BUILD_DIR)/%.d)
 
-INC_DIRS += $(shell find $(SRC_DIRS) -maxdepth 1 -type d)
+INC_DIRS += $(SRC_DIRS)
 INC_FLAGS := $(addprefix -iquote,$(INC_DIRS))
 
 SYS_INC_FLAGS := $(addprefix -I,$(SYS_INC_DIRS))
@@ -72,7 +72,7 @@ endef
 # $1 lib name
 define generate_lib
 
-$(1)_INC_DIRS += $$(shell find $$($(1)_LIB_DIRS) -maxdepth 1 -type d)
+$(1)_INC_DIRS += $$($(1)_LIB_DIRS)
 $(1)_INC_FLAGS := $$(addprefix -iquote,$$($(1)_INC_DIRS))
 
 $(1)_SYS_INC_FLAGS := $$(addprefix -I,$$($(1)_SYS_INC_DIRS))
