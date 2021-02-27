@@ -1,4 +1,4 @@
-# gcc-arm-none-eabi-tools
+# arm-none-eabi-gcc-tools
 ## Setup
 ### Target Variables
 - `TARGET`
