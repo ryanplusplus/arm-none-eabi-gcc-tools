@@ -7,7 +7,7 @@ include $(dir $(realpath $(lastword $(MAKEFILE_LIST))))jlink.mk
 else ifeq ($(DEBUG_ADAPTER),other)
 include $(dir $(realpath $(lastword $(MAKEFILE_LIST))))other.mk
 else
-$(error "DEBUG_ADAPTER must be openocd, black_magic, or other")
+$(error "DEBUG_ADAPTER must be openocd, black_magic, jlink, or other")
 endif
 
 $(BUILD_DIR)/$(TARGET).svd: $(SVD)
