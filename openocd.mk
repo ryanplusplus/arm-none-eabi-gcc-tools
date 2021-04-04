@@ -14,5 +14,5 @@ erase:
 	@openocd -f $(OPENOCD_CFG_DIR)/erase.cfg
 
 $(BUILD_DIR)/openocd.cfg: $(OPENOCD_CFG_DIR)/debug.cfg
-	@mkdir -p $(BUILD_DIR)
+	@mkdir -p $(dir $@)
 	@cp $< $@

@@ -15,6 +15,7 @@ erase: $(BUILD_DIR)/erase.jlink
 
 .PHONY: $(BUILD_DIR)/upload.jlink
 $(BUILD_DIR)/upload.jlink:
+	@mkdir -p $(dir $@)
 	@echo r > $@
 	@echo h >> $@
 	@echo loadfile $(BUILD_DIR)/$(TARGET).hex >> $@
@@ -23,6 +24,7 @@ $(BUILD_DIR)/upload.jlink:
 
 .PHONY: $(BUILD_DIR)/erase.jlink
 $(BUILD_DIR)/erase.jlink:
+	@mkdir -p $(dir $@)
 	@echo r > $@
 	@echo h >> $@
 	@echo erase >> $@

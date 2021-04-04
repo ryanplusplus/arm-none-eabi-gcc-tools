@@ -11,5 +11,5 @@ $(error "DEBUG_ADAPTER must be openocd, black_magic, jlink, or other")
 endif
 
 $(BUILD_DIR)/$(TARGET).svd: $(SVD)
-	@mkdir -p $(BUILD_DIR)
+	@mkdir -p $(dir $@)
 	@cp $(SVD) $@
