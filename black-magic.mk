@@ -4,6 +4,10 @@ else
 BLACK_MAGIC_TPWR := 'disable'
 endif
 
+ifeq ($(BLACK_MAGIC_PORT),)
+$(error "BLACK_MAGIC_PORT must be defined")
+endif
+
 .PHONY: debug-deps
 debug-deps: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).svd
 

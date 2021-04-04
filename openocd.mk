@@ -1,3 +1,7 @@
+ifeq ($(OPENOCD_CFG_DIR),)
+$(error "OPENOCD_CFG_DIR must be defined")
+endif
+
 .PHONY: debug-deps
 debug-deps: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/openocd.cfg $(BUILD_DIR)/$(TARGET).svd
 
