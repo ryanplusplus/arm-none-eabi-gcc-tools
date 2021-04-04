@@ -23,5 +23,7 @@ $(BUILD_DIR)/upload.jlink:
 
 .PHONY: $(BUILD_DIR)/erase.jlink
 $(BUILD_DIR)/erase.jlink:
-	@echo erase > $@
+	@echo r > $@
+	@echo h >> $@
+	@echo erase >> $@
 	@echo exit >> $@
