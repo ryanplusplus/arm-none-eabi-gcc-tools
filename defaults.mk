@@ -33,6 +33,5 @@ CXXFLAGS := \
   -std=c++17 \
 
 LDFLAGS := \
-  -Og \
   --gc-sections \
   -Map=$(BUILD_DIR)/$(TARGET).map \
