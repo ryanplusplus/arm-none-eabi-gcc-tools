@@ -18,7 +18,6 @@ CPPFLAGS := \
   -Wextra \
   -Werror \
   -Wfatal-errors \
-  $(addprefix -D,$(DEFINES)) \
 
 CFLAGS := \
   -std=c99 \
