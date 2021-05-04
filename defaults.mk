@@ -1,13 +1,11 @@
 ASFLAGS := \
   -mcpu=$(CPU) \
-  -march=$(ARCH) \
   -mthumb \
   -g2 \
 
 CPPFLAGS := \
   --specs=nano.specs \
   -mcpu=$(CPU) \
-  -march=$(ARCH) \
   -mthumb \
   -g \
   -g2 \
@@ -18,6 +16,7 @@ CPPFLAGS := \
   -Wextra \
   -Werror \
   -Wfatal-errors \
+  -Wcast-qual \
 
 CFLAGS := \
   -std=c99 \
