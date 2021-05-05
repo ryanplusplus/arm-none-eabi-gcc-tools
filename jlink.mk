@@ -4,7 +4,7 @@ endif
 
 .PHONY: suppress-jlink-edu-popup
 suppress-jlink-edu-popup:
-	@type lua > /dev/null 2>&1 && lua $(__arm_none_eabi_gcc_tools_path)/script/suppress-jlink-edu-popup.lua
+	@type lua > /dev/null 2>&1 && lua $(__arm_none_eabi_gcc_tools_path)/script/suppress-jlink-edu-popup.lua > /dev/null 2>&1 || true
 
 .PHONY: debug-deps
 debug-deps: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).svd suppress-jlink-edu-popup
