@@ -6,7 +6,7 @@ endif
 suppress-jlink-edu-popup:
 	@type lua && lua $(__arm_none_eabi_gcc_tools_path)/script/suppress-jlink-edu-popup.lua
 
-.PHONY: debug-deps
+.PHONY: debug-deps suppress-jlink-edu-popup
 debug-deps: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).svd
 
 .PHONY: upload
