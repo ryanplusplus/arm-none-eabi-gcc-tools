@@ -11,11 +11,11 @@ debug-deps: $(BUILD_DIR)/$(TARGET).elf $(BUILD_DIR)/$(TARGET).svd suppress-jlink
 
 .PHONY: upload
 upload: $(BUILD_DIR)/upload.jlink suppress-jlink-edu-popup
-	@JLinkExe -device $(JLINK_DEVICE) -if SWD -autoconnect 1 -speed 4000 -CommandFile $<
+	@JLinkExe -NoGui 1 -device $(JLINK_DEVICE) -if SWD -autoconnect 1 -speed 4000 -CommandFile $<
 
 .PHONY: erase
 erase: $(BUILD_DIR)/erase.jlink suppress-jlink-edu-popup
-	@JLinkExe -device $(JLINK_DEVICE) -if SWD -autoconnect 1 -speed 4000 -CommandFile $<
+	@JLinkExe -NoGui 1 -device $(JLINK_DEVICE) -if SWD -autoconnect 1 -speed 4000 -CommandFile $<
 
 .PHONY: $(BUILD_DIR)/upload.jlink
 $(BUILD_DIR)/upload.jlink: $(BUILD_DIR)/$(TARGET).hex
