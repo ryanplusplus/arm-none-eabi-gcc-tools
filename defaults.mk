@@ -17,6 +17,7 @@ CPPFLAGS := \
   -Werror \
   -Wfatal-errors \
   -Wcast-qual \
+  -pedantic \
   -nostartfiles \
 
 CFLAGS := \
