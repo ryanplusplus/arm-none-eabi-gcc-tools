@@ -21,7 +21,7 @@ CPPFLAGS := \
   -nostartfiles \
 
 CFLAGS := \
-  -std=c99 \
+  -std=c11 \
 
 CXXFLAGS := \
   -fno-rtti \
