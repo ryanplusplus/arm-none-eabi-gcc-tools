@@ -28,6 +28,7 @@ CXXFLAGS := \
   -fno-exceptions \
   -fno-unwind-tables \
   -fno-non-call-exceptions \
+  -fno-threadsafe-statics \
   -fno-use-cxa-atexit \
   -Weffc++ \
   -std=c++17 \
