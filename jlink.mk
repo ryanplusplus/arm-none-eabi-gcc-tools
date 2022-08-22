@@ -44,7 +44,7 @@ erase: $(BUILD_DIR)/erase.jlink suppress-jlink-license-popup
 
 .PHONY: attach-rtt-client
 attach-rtt-client:
-	@JLinkGDBServer -NoGui 1 -device $(JLINK_DEVICE) -if SWD -autoconnect 1 -speed $(JLINK_SPEED) -nohalt -singlerun & trap 'sleep 0.5' INT && JLinkRTTClient
+	@JLinkGDBServer -device $(JLINK_DEVICE) -if SWD -speed $(JLINK_SPEED) -nohalt -singlerun & trap 'sleep 0.5' INT && JLinkRTTClient
 
 .PHONY: rtt-client
 rtt-client: upload
